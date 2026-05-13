@@ -180,22 +180,6 @@ The results indicate that structured multi-agent reasoning combined with evidenc
 ---
 
 # Installation
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## Install Ollama
@@ -220,15 +204,7 @@ ollama pull qwen2.5
 ## Run Main Pipeline
 
 ```bash
-python src/main.py
-```
-
----
-
-## Example Execution
-
-```bash
-python src/main.py --input examples/sample_input.txt
+python JC_retrieval.py
 ```
 
 ---
@@ -246,12 +222,6 @@ Main dependencies include:
 * openpyxl
 * matplotlib
 * ollama
-
-Install all dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
