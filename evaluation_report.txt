@@ -1,0 +1,20 @@
+=== Metrics ===
+accuracy: 0.8100
+precision: 0.8210
+recall: 0.7925
+f1: 0.8070
+
+Classification report:
+              precision    recall  f1-score   support
+
+        fake       0.82      0.79      0.81        400
+        real       0.80      0.83      0.81        400
+
+    accuracy                           0.81        800
+   macro avg       0.81      0.81      0.81        800
+weighted avg       0.81      0.81      0.81        800
+
+
+Confusion matrix:
+[[317 83]
+ [ 69 331]]
