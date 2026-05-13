@@ -181,7 +181,11 @@ The results indicate that structured multi-agent reasoning combined with evidenc
 
 # Installation
 ---
-
+## Clone Repository
+git clone https://github.com/meerbose2001/JC_MTP_THESIS.git
+cd JC_MTP_THESIS
+## Install Dependencies
+pip install -r requirements.txt
 ## Install Ollama
 
 Download and install Ollama:
