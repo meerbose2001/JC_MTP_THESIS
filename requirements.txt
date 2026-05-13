@@ -1,0 +1,13 @@
+ollama
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+requests
+beautifulsoup4
+lxml
+openpyxl
+tqdm
+python-dotenv
+regex
