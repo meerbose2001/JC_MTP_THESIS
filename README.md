@@ -242,30 +242,98 @@ The framework produces:
 Example:
 
 ```text
-(.venv) C:\Users\SWARNAVA\Documents\FakeNews using 3 AGENTS>python JC_Retrieval.py
-Paste the news text followed by EOF (Ctrl+D on Linux/Mac, Ctrl+Z then Enter on Windows):
+C:\Users\SWARNAVA\Documents\JC FAKE NEWS  RETRIVAL>python JC_Retrieval.py
+Paste news article.
+Press CTRL+Z then Enter (Windows)
+or CTRL+D (Linux/Mac)
+
 The Greater Chennai Corporation (GCC) has reported spending Rs 1,692 crore on roadworks since 2021, but many residents, particularly in North Chennai and newly added areas, still encounter poorly maintained roads.
+
 ^Z
 
-=== Running JC ===
-===interation 1===
+=== ITERATION 1 ===
 
-Judge output: 
-The article appears likely true. It gives a specific numeric claim (Rs 1,692 crore spent since 2021) and a plausible social observation (residents still face poor roads). Specific figures make a claim verifiable against government expenditure reports; the social-complaint clause is consistent with delays between spending and visible maintenance outcomes. No internal logical contradiction is present. Initial Confidence : 0.8
+Judge Output:
 
-Critic output:
- ACTION:  REEVALUATE
-The judge’s confidence is optimistic because the claim mixes (a) a specific budget number and (b) a broad qualitative complaint. Key unsupported assumptions: (1) the numeric amount is attributed to an authoritative source — the Judge did not cite provenance, (2) “still encounter poorly maintained roads” could be localized or anecdotal and does not necessarily contradict the spending figure (spending could be for projects not yet completed or for different wards), (3) there is no temporal anchoring for spending vs. observed conditions (how much of the spending occurred recently?).
+Reasoning:
+The article appears to be based on real information about the Greater Chennai Corporation's spending on roadworks. The specific figure of Rs 1,692 crore is a credible amount and can be easily verified through official records or news reports from reputable sources.
 
-===iteration 2===
-Revised Judge output:
-The article’s numeric claim remains plausible but currently unverified within this session. The figure (Rs 1,692 crore) is consistent with scale expected for municipal roadworks in a major metro over multiple years, but that alone does not guarantee truth.
+However, the assertion that many residents in North Chennai and newly added areas still encounter poorly maintained roads might be exaggerated or an oversimplification. While it's possible that some residents are facing issues with road maintenance, it's unlikely that the entire area is plagued by poor conditions.
 
-Critic output:
-ACTION: OK 
-The Judge has appropriately lowered confidence, listed plausible alternative explanations and it is in accordance with the extracted evidence.
-Numeric final confidence: 0.7
-Final label: real
+The language used is objective and factual, which suggests that the article is not sensationalized or biased. There are no glaring red flags or obvious attempts to mislead readers.
+
+One potential issue is the lack of specific data on how much of the Rs 1,692 crore has been spent in North Chennai and newly added areas, which could indicate a mismatch between reported spending and actual implementation.
+
+Initial Confidence: 0.85
+
+Initial Confidence: 0.85
+
+Critic Output:
+
+ACTION: REEVALUATE
+
+Explanation: The reasoning does not sufficiently address several critical aspects that should be considered for a more accurate and nuanced understanding. While it acknowledges that some areas may face poor road maintenance, it fails to provide clear or concrete evidence of this issue across all affected neighborhoods within North Chennai and newly added areas. Additionally, the lack of specific data on spending allocation can lead to skepticism about the article's claims regarding actual improvements in road conditions. Therefore, further verification and clarification are needed to make a more informed assessment.
+
+=== ITERATION 2 ===
+
+Revised Judge Reasoning:
+
+Reasoning:
+
+While the article presents a reasonable summary of the GCC's expenditure on roadworks, several aspects warrant reevaluation. The reported spending figure of Rs 1,692 crore appears credible, but the claim that many residents in North Chennai and newly added areas face poorly maintained roads requires closer examination.
+
+The language used is still objective and factual, indicating a neutral tone. However, this neutrality does not necessarily imply a lack of controversy or potential bias in the reporting. The absence of specific data on spending allocation for North Chennai and newly added areas raises concerns about the accuracy of the article's claims regarding actual improvements in road conditions.
+
+To improve confidence in the article's assertions, it would be beneficial to verify the existence of concrete evidence, such as resident feedback surveys, photographs or videos of poorly maintained roads, or interviews with city officials about their efforts to address these issues. Further scrutiny is needed to determine whether the reported problem persists across all affected neighborhoods within North Chennai and newly added areas.
+
+Initial Confidence: 0.70
+
+Retrieving external evidence...
+
+Evidence Retrieved.
+
+
+Critic Output:
+
+**REVIEW EVALUATION**
+
+The external evidence provided paints a more detailed and specific picture of the issues faced by residents in Chennai regarding road maintenance compared to the initial article's summary. The evidence highlights that:
+
+1. **Incomplete Spending Reports**: Despite spending 1,692 crore on roadworks, many roads have not been relaid as claimed, indicating possible discrepancies between reported expenditures and actual improvements.
+
+2. **Poor Condition of Existing Roads**: A significant portion of the roads in North Chennai and newly added areas remain poorly maintained, with residents facing issues like potholes and damaged surfaces.
+
+3. **Efforts to Address Issues**: The evidence shows that while some efforts are being made through projects like relaying 15,107 roads worth 1,692 crore under various schemes, these have not been completed on a timely basis, particularly in the area of relaying interior roads.
+
+4. **Specific Projects and Claims**: It clarifies that specific details regarding road works (like those involving NSMT, TURIF, and GCC funds) are provided but do not indicate concrete evidence for improvements.
+
+5. **Future Work Plans**: The article mentions projects to monitor quality controllers and improve footpaths, suggesting ongoing efforts to address these issues in the future.
+
+**Conclusion:**
+The external evidence provides a more nuanced understanding of the Chennai road situation compared to the initial summary. It shows that while there have been some improvements (like 15,107 roads completed), significant areas remain unaddressed due to financial and implementation challenges. This indicates that efforts have not kept pace with the stated expenditures, warranting a reevaluation of reported progress and funding allocation for road projects in Chennai.
+
+=== ITERATION 3 ===
+
+Final Judge Reasoning:
+
+Based on the provided information, the article appears to be largely factual. The language used is formal and objective, with specific details about roadwork expenditures, project plans, and public complaints. While some statements are anecdotal (e.g., from a resident of Kottivakkam), they are contextualized within the broader scope of city-wide issues.
+
+Several indicators suggest that the article may be based on real events and concerns:
+
+1. Specific numbers: The article provides concrete figures for roadwork expenditures, project allocations, and completed works, which suggests an effort to provide accurate information.
+2. Local government sources: Quotes from GCC officials and other stakeholders add credibility to the report.
+3. External references: The inclusion of external evidence (e.g., articles or reports) about Chennai's infrastructure challenges supports the article's claims.
+
+However, some aspects raise potential red flags:
+
+1. Lack of primary sources: While the article includes quotes from GCC officials and residents, there is limited direct evidence from city officials or government agencies.
+2. Unverifiable claims: Some statements (e.g., about specific projects or funding allocations) could be difficult to verify without additional information.
+3. Overemphasis on negative aspects: The article focuses primarily on infrastructure issues, which may create a skewed representation of the city's overall situation.
+
+To further assess the article's authenticity, it would be necessary to cross-reference claims with other credible sources and explore primary documentation from local government agencies or official records.
+
+Final Confidence: 0.95
+Final Label: REAL
 
 ```
 
