@@ -238,17 +238,31 @@ The framework produces:
 Example:
 
 ```text
-Judge Reasoning:
-"The article references official reports and uses neutral language."
+(.venv) C:\Users\SWARNAVA\Documents\FakeNews using 3 AGENTS>python JC_Retrieval.py
+Paste the news text followed by EOF (Ctrl+D on Linux/Mac, Ctrl+Z then Enter on Windows):
+The Greater Chennai Corporation (GCC) has reported spending Rs 1,692 crore on roadworks since 2021, but many residents, particularly in North Chennai and newly added areas, still encounter poorly maintained roads.
+^Z
 
-Critic Feedback:
-"ACTION: OK"
+=== Running JC ===
+===interation 1===
 
-Confidence Score:
-0.82
+Judge output: 
+The article appears likely true. It gives a specific numeric claim (Rs 1,692 crore spent since 2021) and a plausible social observation (residents still face poor roads). Specific figures make a claim verifiable against government expenditure reports; the social-complaint clause is consistent with delays between spending and visible maintenance outcomes. No internal logical contradiction is present. Initial Confidence : 0.8
 
-Final Prediction:
-REAL
+Critic output:
+ ACTION:  REEVALUATE
+The judge’s confidence is optimistic because the claim mixes (a) a specific budget number and (b) a broad qualitative complaint. Key unsupported assumptions: (1) the numeric amount is attributed to an authoritative source — the Judge did not cite provenance, (2) “still encounter poorly maintained roads” could be localized or anecdotal and does not necessarily contradict the spending figure (spending could be for projects not yet completed or for different wards), (3) there is no temporal anchoring for spending vs. observed conditions (how much of the spending occurred recently?).
+
+===iteration 2===
+Revised Judge output:
+The article’s numeric claim remains plausible but currently unverified within this session. The figure (Rs 1,692 crore) is consistent with scale expected for municipal roadworks in a major metro over multiple years, but that alone does not guarantee truth.
+
+Critic output:
+ACTION: OK 
+The Judge has appropriately lowered confidence, listed plausible alternative explanations and it is in accordance with the extracted evidence.
+Numeric final confidence: 0.7
+Final label: real
+
 ```
 
 ---
